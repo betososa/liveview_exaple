@@ -1,6 +1,8 @@
 defmodule LiveViewTalkWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :live_view_talk
 
+  socket "/live", Phoenix.LiveView.Socket
+
   socket "/socket", LiveViewTalkWeb.UserSocket,
     websocket: true,
     longpoll: false

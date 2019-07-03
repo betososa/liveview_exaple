@@ -15,7 +15,10 @@ config :live_view_talk, LiveViewTalkWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "CIHOrH9QrYLJruWEb927StKtUvihpIhKSqw+3ZLmvlyKgFyTGFg/PDt90rp4jefX",
   render_errors: [view: LiveViewTalkWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: LiveViewTalk.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: LiveViewTalk.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "9uaSB/UfKh60i0AwwH/yP2WNziFU5tVu"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
