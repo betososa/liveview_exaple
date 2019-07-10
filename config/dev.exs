@@ -16,7 +16,7 @@ config :live_view_talk, LiveViewTalk.Repo,
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :live_view_talk, LiveViewTalkWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: 4000, ip: {0, 0, 0, 0}],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -62,7 +62,7 @@ config :live_view_talk, LiveViewTalkWeb.Endpoint,
       ~r"priv/gettext/.*(po)$",
       ~r"lib/live_view_talk_web/{live,views}/.*(ex)$",
       ~r"lib/live_view_talk_web/templates/.*(eex)$",
-      ~r"lib/my_app_web/live/.*(ex)$"
+      ~r"lib/live_view_talk_web/live/.*(ex)$"
     ]
   ]
 

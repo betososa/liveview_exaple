@@ -17,7 +17,10 @@ defmodule LiveViewTalkWeb.Router do
   scope "/", LiveViewTalkWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
+
+    get "/snake", PageController, :snake
+    live "/", CounterLive
   end
 
   # Other scopes may use custom stacks.
